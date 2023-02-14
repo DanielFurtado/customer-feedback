@@ -1,0 +1,113 @@
+/* Modified version from reference -> https://codepen.io/anythinggraphic/pen/LYPeaQV */
+
+.Bar--graph-horizontal {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+ .Bar--wrapper {
+    flex: 1;
+    border: 1px solid rgb(12, 17, 66);
+    border-radius: 4px;
+    overflow: hidden; 
+  }
+
+  .Bar--label {
+    width: 46px;
+  }
+
+  .Bar--percentage {
+    margin-left: 5px;
+    width: 42px;
+  }
+
+  .Bar {
+    border-radius: 0;
+    height: 25px;
+    float: left;
+    overflow: hidden;
+    position: relative;
+    width: 0;
+  }
+}
+
+.Bar--rating-container {
+  display: flex;
+  margin: 5px 0;
+  width: 100%;
+}
+
+@mixin bar($bgColor, $showBar, $startTime) {
+  background-color: $bgColor;
+  -webkit-animation: $showBar 1.2s $startTime forwards;
+  -moz-animation: $showBar 1.2s $startTime forwards;
+  animation: $showBar 1.2s $startTime forwards;  
+}
+
+.Bar--graph-one {
+  .Bar-one .Bar {
+    @include bar(#64b2d1, show-bar-one, 0.1s);
+  }
+
+  .Bar-two .Bar {
+    @include bar(#5292ac, show-bar-two, 0.2s);
+  }
+
+  .Bar-three .Bar {
+    @include bar(#407286, show-bar-three, 0.3s);
+  }
+
+  .Bar-four .Bar {
+    @include bar(#2e515f, show-bar-four, 0.4s);
+  }
+
+  .Bar-five .Bar {
+    @include bar(#1d333b, show-bar-five, 0.5s);
+  }
+} 
+
+/* Bar Graph Horizontal Animations */
+@keyframes show-bar-one {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes show-bar-two {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 50%;
+  }
+}
+
+@keyframes show-bar-three {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 10%;
+  }
+}
+
+@keyframes show-bar-four {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 5%;
+  }
+}
+
+@keyframes show-bar-five {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 1%;
+  }
+}
