@@ -6,8 +6,9 @@ import './feedback-results.styles.scss';
 
 export type CustomerRatings = {
   id: Key;
-  barClass: string;
+  barColour: string;
   label: string;
+  startTime: string;
   percentage: string;
 };
 
@@ -18,11 +19,11 @@ export type CustomerFeedbackList = {
 };
 
 const ratings: CustomerRatings[] = [
-  {id: 1, barClass: 'Bar-one', label: '5 star', percentage: '100'},
-  {id: 2, barClass: 'Bar-two', label: '4 star', percentage: '50'},
-  {id: 3, barClass: 'Bar-three', label: '3 star', percentage: '10'},
-  {id: 4, barClass: 'Bar-four', label: '2 star', percentage: '5'},
-  {id: 5, barClass: 'Bar-five', label: '1 star', percentage: '1'},
+  {id: 1, barColour: '#64b2d1', label: '5 star', startTime: '0.1s', percentage: '100'},
+  {id: 2, barColour: '#5292ac', label: '4 star', startTime: '0.2s', percentage: '50'},
+  {id: 3, barColour: '#407286', label: '3 star', startTime: '0.3s', percentage: '10'},
+  {id: 4, barColour: '#2e515f', label: '2 star', startTime: '0.4s', percentage: '5'},
+  {id: 5, barColour: '#1d333b', label: '1 star', startTime: '0.5s', percentage: '1'},
 ];
 
 const feedbacks: CustomerFeedbackList[] = [
@@ -37,7 +38,7 @@ const FeedbackResults = () => {
   return (
     <div className='Feedback--results'>
       <h1>Feedback Results</h1>
-      <section className='Bar--graph Bar--graph-horizontal Bar--graph-one'>
+      <section className='Bar--graph-horizontal Bar--graph-one'>
         {ratings.length ? (
           ratings.map((rating) => <HorizontalBarGraph key={rating.id} rating={rating} />)
         ) : (

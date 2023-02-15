@@ -14,7 +14,7 @@ const CustomerFeedback: FC<CustomerFeedbackItemProps> = ({feedback}) => {
     <Fragment>
       <div className='Customer--feedback'>
         <div className='Customer--email'>{email}</div>
-        <div className='Customer--comments'>{comment}%</div>
+        <div className='Customer--comments'>{comment}</div>
         <hr />
       </div>
     </Fragment>
