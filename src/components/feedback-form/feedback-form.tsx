@@ -1,8 +1,8 @@
-import './feedback-form.styles.scss';
+import { FeedbackFormStyled } from './feedback-form.styles';
 
 const FeedbackForm = () => {
   return (
-    <form className='Form'>
+    <FeedbackFormStyled>
       <h1>Feedback Form</h1>
       <div className='Form--group'>
         <label htmlFor='name'>Name *</label>
@@ -25,10 +25,12 @@ const FeedbackForm = () => {
       <div className='Form--group'>
         <label htmlFor='rating'>Rating *</label>
         <input 
-          type='text' 
+          type='number' 
           id='rating'
           placeholder='Rating (1-5 stars)' 
           name='rating' 
+          max='5'
+          min='1'
         />
       </div>
       <div className='Form--group'>
@@ -44,7 +46,7 @@ const FeedbackForm = () => {
       <div>
         <button type='submit' className='Button--primary'>Submit</button>
       </div>
-    </form>
+    </FeedbackFormStyled>
   );
 };
 
