@@ -1,23 +1,19 @@
-import { Key } from 'react';
-import { ReactComponent as CheckoutLogo } from './logo.svg';
+import { Routes, Route } from 'react-router-dom';
 
-import FeedbackForm from './components/feedback-form/feedback-form';
-import FeedbackResults from './components/feedback-results/feedback-results';
+import Navigation from './routes/navigation/navigation';
+import RatingForm from './routes/rating-form/rating-form';
+import RatingResults from './routes/rating-results/rating-results';
 
 import './App.scss';
 
 const App = () => {
   return (
-    <div className="App">
-      <header className="App--header">
-        <CheckoutLogo />
-      </header>
-      <main className='Main--container'>
-        <FeedbackForm />
-        <hr />
-        <FeedbackResults />
-      </main>
-    </div>
+      <Routes>
+        <Route path='/' element={<Navigation />}>
+          <Route index element={<RatingForm />} />
+          <Route path='results' element={<RatingResults />} />
+        </Route>
+      </Routes>
   );
 }
 

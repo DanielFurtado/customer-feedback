@@ -37,8 +37,7 @@ const bar = (barColour: string, keyframeNum: any, startTime: string) => css`
   animation: $showBar 1.2s ${startTime} forwards;  
 `;
 
-const setHorizontalBar = (
-  { percentage = '0', barColour = '#64b2d1', startTime = '0.1s'}) => {
+const setHorizontalBar = ({ percentage = '0', barColour = '#64b2d1', startTime = '0.1s'}) => {
   const horizontalBarAnimation = keyframes`
     0% { width: 0; }
     100% { width: ${percentage}%; }
