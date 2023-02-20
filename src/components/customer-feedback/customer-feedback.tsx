@@ -1,7 +1,10 @@
 import { FC, Fragment } from 'react';
-import { CustomerFeedbackList } from '../feedback-results/feedback-results';
-
-import './customer-feedback.styles.scss';
+import { CustomerFeedbackList } from '../feedback-results-comments/feedback-results-comments';
+import { 
+  CustomerComments, 
+  CustomerEmail, 
+  CustomerSeparator 
+} from './customer-feedback.styles';
 
 type CustomerFeedbackItemProps = {
   feedback: CustomerFeedbackList;
@@ -12,11 +15,9 @@ const CustomerFeedback: FC<CustomerFeedbackItemProps> = ({feedback}) => {
   
   return (
     <Fragment>
-      <div className='Customer--feedback'>
-        <div className='Customer--email'>{email}</div>
-        <div className='Customer--comments'>{comment}</div>
-        <hr />
-      </div>
+        <CustomerEmail>{email}</CustomerEmail>
+        <CustomerComments>{comment}</CustomerComments>
+        <CustomerSeparator><hr/></CustomerSeparator>
     </Fragment>
   );
 };
