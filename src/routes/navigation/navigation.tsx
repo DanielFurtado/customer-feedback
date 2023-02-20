@@ -1,31 +1,35 @@
 import { Fragment } from 'react';
 import { Outlet, NavLink } from 'react-router-dom';
 import { ReactComponent as CheckoutLogo } from '../../assets/logo.svg';
-
-import './navigation.styles.scss';
+import { 
+  NavContainer, 
+  NavigationHeader, 
+  NavLinksContainer 
+} from './navigation.styles';
 
 const Navigation = () => {
+  
   return (
     <Fragment>
-      <header className='Navigation' role='banner'>
-        <nav className='Nav--container'>
+      <NavigationHeader role='banner'>
+        <NavContainer>
           <NavLink className='Nav--logo-container' to='/'>
             <CheckoutLogo />
           </NavLink>
-          <ul className='Nav--links-container' role='menubar'>
+          <NavLinksContainer role='menubar'>
             <li role="none">
               <NavLink to='/' className='Nav--link' role='menuitem'>
-                Submit rating
+                Form
               </NavLink>
             </li>
             <li role="none">
               <NavLink to='/results' className='Nav--link' role='menuitem'>
-                Rating Results
+                Results
               </NavLink>
             </li>
-          </ul>
-        </nav>
-      </header>
+          </NavLinksContainer>
+        </NavContainer>
+      </NavigationHeader>
       <Outlet />
     </Fragment>
   );
