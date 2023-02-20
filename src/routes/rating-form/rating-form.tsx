@@ -1,13 +1,14 @@
 import { Fragment } from 'react';
 import { Outlet } from 'react-router-dom';
+import { MainContainer } from '../../App.styles';
 import FeedbackForm  from '../../components/feedback-form/feedback-form';
 
-const RatingForm = () => {
+const RatingForm = () => { 
   return (
     <Fragment>
-      <main className='Main--container'>
+      <MainContainer>
         <FeedbackForm />
-      </main>
+      </MainContainer>
       <Outlet />
     </Fragment>
   );

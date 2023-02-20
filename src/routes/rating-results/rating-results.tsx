@@ -1,13 +1,14 @@
 import { Fragment } from 'react';
 import { Outlet } from 'react-router-dom';
 import FeedbackResults from '../../components/feedback-results/feedback-results';
+import { MainContainer } from '../../App.styles';
 
 const RatingResults = () => {
   return (
     <Fragment>
-      <main className='Main--container'>
+      <MainContainer>
         <FeedbackResults />
-      </main>
+      </MainContainer>
       <Outlet />
     </Fragment>
   );

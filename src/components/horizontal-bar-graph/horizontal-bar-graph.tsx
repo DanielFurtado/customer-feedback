@@ -1,5 +1,5 @@
 import { FC, Fragment } from 'react';
-import { CustomerRatings } from '../feedback-results/feedback-results';
+import { CustomerRatings } from '../feedback-results-graph/feedback-results-graph';
 
 import {
   BarWrapper,
