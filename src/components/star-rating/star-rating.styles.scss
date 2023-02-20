@@ -1,0 +1,19 @@
+.Star--button {
+  background-color: transparent;
+  border: none;
+  font-size: 30px;
+  outline: none;
+  cursor: pointer;
+}
+
+.Star--button:first-child {
+  padding-left: 0;
+}
+
+.Star--button-on {
+  color: #22a77d;
+}
+
+.Star--button-off {
+  color: #ccc;
+}
