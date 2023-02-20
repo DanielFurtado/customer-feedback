@@ -16,17 +16,17 @@ export const BarWrapper = styled.div`
 `;
 
 export const BarLabel = styled.div`
-  width: 46px;
+  width: 50px;
 `;
 
 export const BarPercentage = styled.div`
-  margin-left: 5px;
+  margin-left: 10px;
   width: 42px;
 `;
 
 export const BarRatingContainer = styled.div`
   display: flex;
-  margin: 5px 0;
+  margin: 8px 0;
   width: 100%;
 `;
 
