@@ -4,8 +4,7 @@ export const FeedbackFormStyled = styled.form`
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  padding: 20px;
-  width: 500px;
+  width: 100%;
 
   label {
     display: block;
@@ -24,8 +23,17 @@ export const FeedbackFormStyled = styled.form`
   }
 
   textarea {
-    min-height: 140px;
     resize: none;
+    height: inherit;
+    margin-bottom: 4px;
+
+    @media (max-width: 768px) {
+      min-height: 120px;
+    }
+  }
+
+  textarea.input-error {
+    margin-bottom: 0;
   }
 
   input:focus,
@@ -42,4 +50,37 @@ export const FeedbackFormStyled = styled.form`
     color: #ff3333;
     margin-top: 4px;
   }
+`;
+
+export const FormWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+  }
+`;
+
+export const FormSection = styled.div`
+  flex: 1;
+
+  &:first-child {
+    margin-right: 20px;
+
+    @media (max-width: 768px) {
+      margin-right: 0;
+    }
+  }
+`;
+
+export const FormGroupComment = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  height: 100%;
+`;
+
+export const FormButtonWrapper = styled.div`
+  text-align: right;
 `;
