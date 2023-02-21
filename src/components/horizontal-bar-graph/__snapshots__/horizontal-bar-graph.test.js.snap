@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Feedback Results renders 1`] = `
+<div
+  className="sc-eDvSVe jXVCZZ"
+>
+  <div
+    className="sc-dkrFOg fOeNmb"
+  >
+    5 star
+  </div>
+  <div
+    className="sc-gswNZR kCONEr"
+  >
+    <div
+      className="sc-jSUZER ZGKXo"
+    />
+  </div>
+  <div
+    className="sc-hLBbgP iTDVEa"
+  >
+    100
+    %
+  </div>
+</div>
+`;
