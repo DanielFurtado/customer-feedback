@@ -22,7 +22,7 @@ export const MainContainer = styled.main`
   justify-content: center;
   margin: 0 auto;
   max-width: 768px;
-  padding: 20px;
+  padding: 40px 20px;
   width: 100%;
 `;
 

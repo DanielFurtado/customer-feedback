@@ -54,10 +54,10 @@ exports[`renders 1`] = `
     </nav>
   </header>
   <main
-    className="sc-eDvSVe bpMbeC"
+    className="sc-eDvSVe ghWFaa"
   >
     <form
-      className="sc-gKPRtg jeGQCy"
+      className="sc-gKPRtg fKCcpJ"
       noValidate={true}
     >
       <h2>
@@ -79,6 +79,7 @@ exports[`renders 1`] = `
             </label>
             <input
               aria-invalid="false"
+              aria-label="Name"
               id="name"
               name="name"
               onBlur={[Function]}
@@ -97,6 +98,7 @@ exports[`renders 1`] = `
             </label>
             <input
               aria-invalid="false"
+              aria-label="Email"
               id="email"
               name="email"
               onBlur={[Function]}
@@ -115,6 +117,7 @@ exports[`renders 1`] = `
             </label>
             <input
               aria-invalid="false"
+              aria-label="Rating"
               id="rating"
               max="5"
               min="1"
@@ -123,10 +126,6 @@ exports[`renders 1`] = `
               onChange={[Function]}
               placeholder="Rating (1-5 stars)"
               type="number"
-            />
-            <p
-              className="error"
-              role="alert"
             />
           </div>
         </div>
@@ -142,6 +141,8 @@ exports[`renders 1`] = `
               Comment *
             </label>
             <textarea
+              aria-invalid="false"
+              aria-label="Comment"
               id="comment"
               name="comment"
               onBlur={[Function]}
