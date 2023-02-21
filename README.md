@@ -17,7 +17,6 @@ This app collects and displays customer feedback.
 
 -  `npm run test -- --coverage` to run tests and view unit test coverage  
 
-
 **Additional packages installed:**
 
 React redux: https://react-redux.js.org/
@@ -33,9 +32,9 @@ Styled components: https://styled-components.com/
 ## Further improvements (TODO):
   
 * Add component to display total rating with stars highlighted in detail.
-* Select rating by clicking on stars instead of adding numbers.
+* Select rating by clicking on stars instead of number input.
 * Additional test coverage.
-* Typescript improvements. (Remove <any> types)
+* Typescript improvements.
 
 ## Author
 
