@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Feedback Results renders 1`] = `
+<header
+  className="sc-bcXHqe gAzLXc"
+  role="banner"
+>
+  <nav
+    className="sc-gswNZR cYZNu"
+  >
+    <a
+      aria-current="page"
+      className="Nav--logo-container active"
+      href="/"
+      onClick={[Function]}
+    >
+      <svg>
+        logo.svg
+      </svg>
+    </a>
+    <ul
+      className="sc-dkrFOg cybPPa"
+      role="menubar"
+    >
+      <li
+        role="none"
+      >
+        <a
+          aria-current="page"
+          className="Nav--link active"
+          href="/"
+          onClick={[Function]}
+          role="menuitem"
+        >
+          Form
+        </a>
+      </li>
+      <li
+        role="none"
+      >
+        <a
+          className="Nav--link"
+          href="/results"
+          onClick={[Function]}
+          role="menuitem"
+        >
+          Results
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
+`;
