@@ -5,7 +5,7 @@ export const FeedbackResultsStyled = styled.div`
 `;
 
 export const FeedbackResultsControl = styled.div `
-  align-items: center;
+  align-items: flex-start;
   display: flex; 
   justify-content: space-between;
 
@@ -14,5 +14,9 @@ export const FeedbackResultsControl = styled.div `
     display: flex; 
     flex-direction: column-reverse;
     justify-content: space-between;
+  }
+
+  button {
+    margin-top: 0;
   }
 `;   
