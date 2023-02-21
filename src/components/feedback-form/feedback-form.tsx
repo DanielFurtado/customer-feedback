@@ -4,7 +4,6 @@ import { useForm } from 'react-hook-form';
 import { useDispatch } from 'react-redux';
 import uuid from 'react-uuid';
 import { setRating } from '../../store/rating/rating.action';
-import StarRating from '../star-rating/star-rating';
 
 import { 
   FeedbackFormStyled, 
@@ -28,12 +27,6 @@ const FeedbackForm = () => {
   const dispatch = useDispatch();
   const [rating, setStarRating] = useState(0);
   const { register, formState: { errors }, handleSubmit, reset } = useForm<FormData>();
-
-  // setValue('rating', `${rating}`);
-
-  // useEffect(() => {
-  //   register('rating');
-  // }, [setValue, register]);
 
   const onSubmit = (data: object) => {
     const currentRating: any = { 
@@ -94,7 +87,6 @@ const FeedbackForm = () => {
           </div>
           <div className='Form--group'>
             <label htmlFor='rating'>Rating *</label>
-            {/* <StarRating setStarRating={setStarRating} rating={rating} /> */}
             <input 
               {...register('rating', { 
                 required: 'Please select a rating',
