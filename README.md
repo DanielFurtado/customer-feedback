@@ -3,13 +3,9 @@
 
 **Collecting Customer Feedback**
 
-This web application is based of [Create React App with Typescript].(https://create-react-app.dev/docs/adding-typescript/).
+This web application is based of [Create React App with Typescript](https://create-react-app.dev/docs/adding-typescript/).
 
 This app collects and displays customer feedback.
-
-## Author
-
-* **Daniel Costa**
 
 ## Set up
 
@@ -40,3 +36,7 @@ Styled components: https://styled-components.com/
 * Select rating by clicking on stars instead of adding numbers.
 * Additional test coverage.
 * Typescript improvements. (Remove <any> types)
+
+## Author
+
+* **Daniel Costa**
