@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { useDispatch } from 'react-redux';
@@ -25,7 +24,6 @@ type FormData = {
 const FeedbackForm = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const [rating, setStarRating] = useState(0);
   const { register, formState: { errors }, handleSubmit, reset } = useForm<FormData>();
 
   const onSubmit = (data: object) => {
@@ -54,6 +52,7 @@ const FeedbackForm = () => {
               className={errors.name && 'input-error'}
               placeholder='Name' 
               name='name'
+              aria-label='Name'
               aria-invalid={errors.name ? 'true' : 'false'}
             />
             {errors.name?.type === 'required' && 
@@ -77,6 +76,7 @@ const FeedbackForm = () => {
               className={errors.email && 'input-error'}
               placeholder='Email' 
               name='email' 
+              aria-label='Email'
               aria-invalid={errors.email ? 'true' : 'false'}
             />
             {errors.email && 
@@ -102,9 +102,10 @@ const FeedbackForm = () => {
               name='rating' 
               max='5'
               min='1'
+              aria-label='Rating'
               aria-invalid={errors.email ? 'true' : 'false'}
             />
-            {(errors.rating?.type === 'required' || rating === 0) && 
+            {(errors.rating?.type === 'required') && 
               <p className='error' role='alert'>
                 {errors.rating?.message}
               </p>
@@ -122,6 +123,8 @@ const FeedbackForm = () => {
               id='comment'
               placeholder='Comment' 
               name='comment' 
+              aria-label='Comment'
+              aria-invalid={errors.comment ? 'true' : 'false'}
             />
             {errors.comment?.type === 'required' && 
               <p className='error' role='alert'>
