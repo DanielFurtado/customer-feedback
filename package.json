@@ -24,6 +24,13 @@
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}",
+      "!src/serviceWorker.js",
+      "!src/index.tsx"
+    ]
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -52,6 +59,7 @@
     "@types/redux-logger": "^3.0.9",
     "@types/styled-components": "^5.1.26",
     "node-sass": "^7.0.3",
+    "react-test-renderer": "^18.2.0",
     "sass-loader": "^13.2.0"
   }
 }
