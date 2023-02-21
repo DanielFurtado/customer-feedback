@@ -25,15 +25,10 @@ export const FeedbackFormStyled = styled.form`
   textarea {
     resize: none;
     height: inherit;
-    margin-bottom: 4px;
 
     @media (max-width: 768px) {
       min-height: 120px;
     }
-  }
-
-  textarea.input-error {
-    margin-bottom: 0;
   }
 
   input:focus,

@@ -2,7 +2,7 @@
 
 exports[`Feedback Form renders 1`] = `
 <form
-  className="sc-bcXHqe dgCbUO"
+  className="sc-bcXHqe cudjRR"
   noValidate={true}
 >
   <h2>
@@ -24,6 +24,7 @@ exports[`Feedback Form renders 1`] = `
         </label>
         <input
           aria-invalid="false"
+          aria-label="Name"
           id="name"
           name="name"
           onBlur={[Function]}
@@ -42,6 +43,7 @@ exports[`Feedback Form renders 1`] = `
         </label>
         <input
           aria-invalid="false"
+          aria-label="Email"
           id="email"
           name="email"
           onBlur={[Function]}
@@ -60,6 +62,7 @@ exports[`Feedback Form renders 1`] = `
         </label>
         <input
           aria-invalid="false"
+          aria-label="Rating"
           id="rating"
           max="5"
           min="1"
@@ -68,10 +71,6 @@ exports[`Feedback Form renders 1`] = `
           onChange={[Function]}
           placeholder="Rating (1-5 stars)"
           type="number"
-        />
-        <p
-          className="error"
-          role="alert"
         />
       </div>
     </div>
@@ -87,6 +86,8 @@ exports[`Feedback Form renders 1`] = `
           Comment *
         </label>
         <textarea
+          aria-invalid="false"
+          aria-label="Comment"
           id="comment"
           name="comment"
           onBlur={[Function]}
