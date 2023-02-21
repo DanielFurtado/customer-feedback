@@ -27,20 +27,24 @@ const ratings: CustomerRatings[] = [
 const setStarRatingsCount = (feedbackList: Array<CustomerFeedbackList>) => {
   let starRatingsCount = new Array(5).fill(0);
   
-  feedbackList.map((feedback: any) => {
+  feedbackList.forEach((feedback: any) => {
     const starIndex = parseInt(feedback.rating) - 1;
     starRatingsCount[starIndex]++;
   });
+
   return starRatingsCount.reverse();
 };
 
 const calculateRatingsTotal = (feedbackList: Array<CustomerFeedbackList>) => {
   let ratingTotal = 0;
-  feedbackList.map((feedback: any) => {
+
+  feedbackList.forEach((feedback: any) => {
     ratingTotal+=parseInt(feedback.rating);
   });
+  
   const average = (ratingTotal / feedbackList.length) || 0;
   const total = Number.isInteger(average) ? average : average.toFixed(2);
+
   return total;
 };
 
