@@ -58,9 +58,12 @@ export const NavLinksContainer = styled.ul`
     left: 0;
     background-color: white;
   }
+
+  .Nav--link:hover {
+    color: rgb(109, 112, 142);
+  }
   
-  .Nav--link.active::after,
-  .Nav--link:hover::after {
+  .Nav--link.active::after {
     transform: scaleX(1);
   }
 
