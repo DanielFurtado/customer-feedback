@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Feedback Results renders 1`] = `
+<div
+  className="sc-ipEyDJ cGLKSq"
+>
+  <div
+    className="sc-csuSiG iZWFYr"
+  >
+    <h2>
+      Feedback Results
+    </h2>
+    <button
+      className="sc-ksBlkl gkHhuI"
+      onClick={[Function]}
+      type="button"
+    >
+      Write a review
+    </button>
+  </div>
+  <section>
+    <div
+      className="sc-gKPRtg hyPmrB"
+    >
+      <div
+        className="sc-iBYQkv bctHwM"
+      >
+        <svg>
+          info-icon.svg
+        </svg>
+      </div>
+      No ratings yet!
+    </div>
+  </section>
+  <h3>
+    Latest Comments
+  </h3>
+  <section>
+    <div
+      className="sc-gKPRtg hyPmrB"
+    >
+      <div
+        className="sc-iBYQkv bctHwM"
+      >
+        <svg>
+          info-icon.svg
+        </svg>
+      </div>
+      Be the first to submit your feedback.
+    </div>
+  </section>
+</div>
+`;

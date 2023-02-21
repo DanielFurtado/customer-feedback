@@ -15,9 +15,9 @@ const CustomerFeedback: FC<CustomerFeedbackItemProps> = ({feedback}) => {
   
   return (
     <Fragment>
-        <CustomerEmail>{email}</CustomerEmail>
-        <CustomerComments>{comment}</CustomerComments>
-        <CustomerSeparator><hr/></CustomerSeparator>
+      <CustomerEmail>{email}</CustomerEmail>
+      <CustomerComments>{comment}</CustomerComments>
+      <CustomerSeparator><hr/></CustomerSeparator>
     </Fragment>
   );
 };

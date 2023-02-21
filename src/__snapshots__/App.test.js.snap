@@ -1,0 +1,168 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders 1`] = `
+<div
+  className="sc-hLBbgP ccLVbk"
+>
+  <header
+    className="sc-bcXHqe gAzLXc"
+    role="banner"
+  >
+    <nav
+      className="sc-gswNZR cYZNu"
+    >
+      <a
+        aria-current="page"
+        className="Nav--logo-container active"
+        href="/"
+        onClick={[Function]}
+      >
+        <svg>
+          logo.svg
+        </svg>
+      </a>
+      <ul
+        className="sc-dkrFOg cybPPa"
+        role="menubar"
+      >
+        <li
+          role="none"
+        >
+          <a
+            aria-current="page"
+            className="Nav--link active"
+            href="/"
+            onClick={[Function]}
+            role="menuitem"
+          >
+            Form
+          </a>
+        </li>
+        <li
+          role="none"
+        >
+          <a
+            className="Nav--link"
+            href="/results"
+            onClick={[Function]}
+            role="menuitem"
+          >
+            Results
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main
+    className="sc-eDvSVe bpMbeC"
+  >
+    <form
+      className="sc-gKPRtg jeGQCy"
+      noValidate={true}
+    >
+      <h2>
+        Feedback Form
+      </h2>
+      <div
+        className="sc-iBYQkv LVoZX"
+      >
+        <div
+          className="sc-ftTHYK fjpkYH"
+        >
+          <div
+            className="Form--group"
+          >
+            <label
+              htmlFor="name"
+            >
+              Name *
+            </label>
+            <input
+              aria-invalid="false"
+              id="name"
+              name="name"
+              onBlur={[Function]}
+              onChange={[Function]}
+              placeholder="Name"
+              type="text"
+            />
+          </div>
+          <div
+            className="Form--group"
+          >
+            <label
+              htmlFor="email"
+            >
+              Email *
+            </label>
+            <input
+              aria-invalid="false"
+              id="email"
+              name="email"
+              onBlur={[Function]}
+              onChange={[Function]}
+              placeholder="Email"
+              type="text"
+            />
+          </div>
+          <div
+            className="Form--group"
+          >
+            <label
+              htmlFor="rating"
+            >
+              Rating *
+            </label>
+            <input
+              aria-invalid="false"
+              id="rating"
+              max="5"
+              min="1"
+              name="rating"
+              onBlur={[Function]}
+              onChange={[Function]}
+              placeholder="Rating (1-5 stars)"
+              type="number"
+            />
+            <p
+              className="error"
+              role="alert"
+            />
+          </div>
+        </div>
+        <div
+          className="sc-ftTHYK fjpkYH"
+        >
+          <div
+            className="sc-pyfCe eOVupX"
+          >
+            <label
+              htmlFor="comment"
+            >
+              Comment *
+            </label>
+            <textarea
+              id="comment"
+              name="comment"
+              onBlur={[Function]}
+              onChange={[Function]}
+              placeholder="Comment"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        className="sc-jrcTuL deiqno"
+      >
+        <button
+          className="sc-jSUZER eFvONg"
+          onClick={[Function]}
+          type="submit"
+        >
+          Submit
+        </button>
+      </div>
+    </form>
+  </main>
+</div>
+`;

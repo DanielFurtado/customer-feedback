@@ -1,5 +1,4 @@
 import { configureStore } from '@reduxjs/toolkit';
-import { combineReducers } from '@reduxjs/toolkit';
 import ratingReducer from './rating/rating.reducer';
 
 export const store = configureStore({

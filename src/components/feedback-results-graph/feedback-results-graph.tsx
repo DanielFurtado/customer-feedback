@@ -65,12 +65,12 @@ const FeedbackResultsGraph = () => {
         {
           feedbackList.length > 0 && 
           <FormOverallRating>
-            <span>Overall Rating:</span> 
+            <span>Overall Rating: </span> 
             {totalStarRating} out of 5
           </FormOverallRating>
         }
         {
-          feedbackList.length ? (ratings.map((rating) => 
+          feedbackList.length ? (ratings.map(rating => 
             <HorizontalBarGraph key={rating.id} rating={rating} />)
           ) : (
             <FormAlertInfo>

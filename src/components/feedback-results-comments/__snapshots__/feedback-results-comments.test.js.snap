@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Feedback Results renders 1`] = `
+Array [
+  <h3>
+    Latest Comments
+  </h3>,
+  <section>
+    <div
+      className="sc-hLBbgP cTyqzT"
+    >
+      <div
+        className="sc-eDvSVe gJVjxR"
+      >
+        <svg>
+          info-icon.svg
+        </svg>
+      </div>
+      Be the first to submit your feedback.
+    </div>
+  </section>,
+]
+`;

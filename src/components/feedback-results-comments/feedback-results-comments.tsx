@@ -21,7 +21,7 @@ const FeedbackResultsComments = () => {
       <h3>Latest Comments</h3>
       <section>
         {feedbackList.length ? (
-          feedbackList.map((feedback: any) => 
+          feedbackList.map(feedback => 
             <CustomerFeedback key={feedback.id} feedback={feedback} />)
         ) : (
           <FormAlertInfo>

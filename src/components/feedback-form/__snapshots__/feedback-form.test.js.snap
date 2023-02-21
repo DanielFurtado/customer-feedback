@@ -1,0 +1,111 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Feedback Form renders 1`] = `
+<form
+  className="sc-bcXHqe dgCbUO"
+  noValidate={true}
+>
+  <h2>
+    Feedback Form
+  </h2>
+  <div
+    className="sc-gswNZR kDxzyM"
+  >
+    <div
+      className="sc-dkrFOg jrznKg"
+    >
+      <div
+        className="Form--group"
+      >
+        <label
+          htmlFor="name"
+        >
+          Name *
+        </label>
+        <input
+          aria-invalid="false"
+          id="name"
+          name="name"
+          onBlur={[Function]}
+          onChange={[Function]}
+          placeholder="Name"
+          type="text"
+        />
+      </div>
+      <div
+        className="Form--group"
+      >
+        <label
+          htmlFor="email"
+        >
+          Email *
+        </label>
+        <input
+          aria-invalid="false"
+          id="email"
+          name="email"
+          onBlur={[Function]}
+          onChange={[Function]}
+          placeholder="Email"
+          type="text"
+        />
+      </div>
+      <div
+        className="Form--group"
+      >
+        <label
+          htmlFor="rating"
+        >
+          Rating *
+        </label>
+        <input
+          aria-invalid="false"
+          id="rating"
+          max="5"
+          min="1"
+          name="rating"
+          onBlur={[Function]}
+          onChange={[Function]}
+          placeholder="Rating (1-5 stars)"
+          type="number"
+        />
+        <p
+          className="error"
+          role="alert"
+        />
+      </div>
+    </div>
+    <div
+      className="sc-dkrFOg jrznKg"
+    >
+      <div
+        className="sc-hLBbgP cqTXbJ"
+      >
+        <label
+          htmlFor="comment"
+        >
+          Comment *
+        </label>
+        <textarea
+          id="comment"
+          name="comment"
+          onBlur={[Function]}
+          onChange={[Function]}
+          placeholder="Comment"
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    className="sc-eDvSVe cMlANh"
+  >
+    <button
+      className="sc-iBYQkv cPoVNX"
+      onClick={[Function]}
+      type="submit"
+    >
+      Submit
+    </button>
+  </div>
+</form>
+`;

@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Feedback Results renders 1`] = `
+<section>
+  <div
+    className="sc-gKPRtg hyPmrB"
+  >
+    <div
+      className="sc-iBYQkv bctHwM"
+    >
+      <svg>
+        info-icon.svg
+      </svg>
+    </div>
+    No ratings yet!
+  </div>
+</section>
+`;
