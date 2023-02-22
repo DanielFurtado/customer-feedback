@@ -60,6 +60,10 @@ describe(('Feedback Form'), () => {
       target: { value: 'test wrong email' }
     });
 
+    fireEvent.input(screen.getByRole('spinbutton', { name: 'Rating' }), {
+      target: { value: '6' }
+    });
+
     fireEvent.click(screen.getByText(/submit/i));
     
     await waitFor(() => {
@@ -67,6 +71,6 @@ describe(('Feedback Form'), () => {
     }); 
     expect(screen.getByText('Entered value does not match email format.')).toBeInTheDocument();
     expect(screen.getByText('Please enter a comment.')).toBeInTheDocument();
-    expect(screen.getByText('Please select a rating')).toBeInTheDocument();
+    expect(screen.getByText('Please enter your rating between 1-5 stars.')).toBeInTheDocument();
   });
 });
