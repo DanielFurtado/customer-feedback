@@ -103,7 +103,7 @@ const FeedbackForm = () => {
               aria-label='Rating'
               aria-invalid={errors.email ? 'true' : 'false'}
             />
-            {(errors.rating?.type === 'required') && 
+            {errors.rating && 
               <ErrorMessage>
                 {errors.rating?.message}
               </ErrorMessage>
