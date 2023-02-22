@@ -22,7 +22,7 @@ exports[`renders 1`] = `
         </svg>
       </a>
       <ul
-        className="sc-dkrFOg cybPPa"
+        className="sc-dkrFOg fWBNPM"
         role="menubar"
       >
         <li
@@ -57,7 +57,7 @@ exports[`renders 1`] = `
     className="sc-eDvSVe ghWFaa"
   >
     <form
-      className="sc-gKPRtg fKCcpJ"
+      className="sc-gKPRtg cMLKIh"
       noValidate={true}
     >
       <h2>

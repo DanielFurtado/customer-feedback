@@ -1,6 +1,7 @@
 import styled, { css, keyframes } from 'styled-components';
 
-/* Modified version from reference -> https://codepen.io/anythinggraphic/pen/LYPeaQV */
+/* Modified version from reference 
+-> https://codepen.io/anythinggraphic/pen/LYPeaQV */
 
 export const BarGraphHorizontal = styled.div`
   display: flex;

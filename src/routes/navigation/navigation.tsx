@@ -8,7 +8,6 @@ import {
 } from './navigation.styles';
 
 const Navigation = () => {
-  
   return (
     <Fragment>
       <NavigationHeader role='banner'>

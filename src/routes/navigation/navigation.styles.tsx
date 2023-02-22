@@ -71,4 +71,4 @@ export const NavLinksContainer = styled.ul`
   .Nav--link::after {
     top: 38px;
   }
-`;
+}`;
