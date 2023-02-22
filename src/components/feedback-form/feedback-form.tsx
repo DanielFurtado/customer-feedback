@@ -9,7 +9,8 @@ import {
   FormButtonWrapper, 
   FormGroupComment, 
   FormSection, 
-  FormWrapper 
+  FormWrapper,
+  ErrorMessage
 } from './feedback-form.styles';
 import { ButtonPrimary } from '../../App.styles';
 
@@ -27,10 +28,7 @@ const FeedbackForm = () => {
   const { register, formState: { errors }, handleSubmit, reset } = useForm<FormData>();
 
   const onSubmit = (data: object) => {
-    const currentRating: any = { 
-      id: uuid(), 
-      ...data 
-    };
+    const currentRating: any = { id: uuid(), ...data };
     dispatch(setRating(currentRating));
     reset();
     navigate('/results');
@@ -56,9 +54,9 @@ const FeedbackForm = () => {
               aria-invalid={errors.name ? 'true' : 'false'}
             />
             {errors.name?.type === 'required' && 
-              <p className='error' role='alert'>
+              <ErrorMessage>
                 {errors.name?.message}
-              </p>
+              </ErrorMessage>
             }
           </div>
           <div className='Form--group'>
@@ -80,9 +78,9 @@ const FeedbackForm = () => {
               aria-invalid={errors.email ? 'true' : 'false'}
             />
             {errors.email && 
-              <p className='error' role='alert'>
+              <ErrorMessage>
                 {errors.email?.message}
-              </p>
+              </ErrorMessage>
             }
           </div>
           <div className='Form--group'>
@@ -106,9 +104,9 @@ const FeedbackForm = () => {
               aria-invalid={errors.email ? 'true' : 'false'}
             />
             {(errors.rating?.type === 'required') && 
-              <p className='error' role='alert'>
+              <ErrorMessage>
                 {errors.rating?.message}
-              </p>
+              </ErrorMessage>
             }
           </div>
         </FormSection>
@@ -127,9 +125,9 @@ const FeedbackForm = () => {
               aria-invalid={errors.comment ? 'true' : 'false'}
             />
             {errors.comment?.type === 'required' && 
-              <p className='error' role='alert'>
+              <ErrorMessage>
                 {errors.comment?.message}
-              </p>
+              </ErrorMessage>
             }
           </FormGroupComment>
         </FormSection>

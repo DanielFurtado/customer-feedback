@@ -40,11 +40,6 @@ export const FeedbackFormStyled = styled.form`
   .input-error {
     border-color: #ff3333;
   }
-
-  .error {
-    color: #ff3333;
-    margin-top: 4px;
-  }
 `;
 
 export const FormWrapper = styled.div`
@@ -79,3 +74,10 @@ export const FormGroupComment = styled.div`
 export const FormButtonWrapper = styled.div`
   text-align: right;
 `;
+
+export const ErrorMessage = styled.p`
+  color: #ff3333;
+  margin-top: 4px;
+`;
+
+ErrorMessage.defaultProps = { role: 'alert' };
