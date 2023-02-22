@@ -4,7 +4,6 @@ import { ReactComponent as InfoIcon} from '../../assets/info-icon.svg';
 import { selectFeedbackList } from '../../store/rating/rating.selector';
 import { CustomerFeedbackList } from '../feedback-results-comments/feedback-results-comments';
 import HorizontalBarGraph from '../horizontal-bar-graph/horizontal-bar-graph';
-
 import { FormAlertInfo, FormAlertIcon } from '../feedback-results-comments/feedback-results-comments.styles';
 import { FormOverallRating } from './feedback-result-graph.styles';
 
@@ -16,6 +15,7 @@ export type CustomerRatings = {
   percentage: string;
 };
 
+// Horizontal bar graph configuration, with initial percentage set to 0.
 const ratings: CustomerRatings[] = [
   {id: 5, barColour: '#64b2d1', label: '5 star', startTime: '0.1s', percentage: '0'},
   {id: 4, barColour: '#5292ac', label: '4 star', startTime: '0.2s', percentage: '0'},
@@ -24,6 +24,8 @@ const ratings: CustomerRatings[] = [
   {id: 1, barColour: '#1d333b', label: '1 star', startTime: '0.5s', percentage: '0'},
 ];
 
+/* Returns and array with the total count for each star rating
+eg: [3,0,0,0,1] = 3x5 star and 1x1 star rating */
 const setStarRatingsCount = (feedbackList: Array<CustomerFeedbackList>) => {
   let starRatingsCount = new Array(5).fill(0);
   
@@ -35,7 +37,8 @@ const setStarRatingsCount = (feedbackList: Array<CustomerFeedbackList>) => {
   return starRatingsCount.reverse();
 };
 
-const calculateRatingsTotal = (feedbackList: Array<CustomerFeedbackList>) => {
+// Calculates and returns the overall rating average 
+const overallRatingsAverage = (feedbackList: Array<CustomerFeedbackList>) => {
   let ratingTotal = 0;
 
   feedbackList.forEach((feedback: any) => {
@@ -43,23 +46,25 @@ const calculateRatingsTotal = (feedbackList: Array<CustomerFeedbackList>) => {
   });
   
   const average = (ratingTotal / feedbackList.length) || 0;
-  const total = Number.isInteger(average) ? average : average.toFixed(2);
+  const formattedAverage = Number.isInteger(average) ? average : average.toFixed(2);
 
-  return total;
+  return formattedAverage;
+};
+
+// Returns the percentage for each star rating
+const ratingsPercentage = (rating: number, feedbackList: Array<CustomerFeedbackList>) => {
+  return (rating / feedbackList.length * 100).toFixed(0);
 };
 
 const FeedbackResultsGraph = () => {
   const feedbackList: Array<CustomerFeedbackList> = useAppSelector(selectFeedbackList);
 
+  //Sets up the Graph component for each rating
   const starRatings = setStarRatingsCount(feedbackList);
-  const totalStarRating = calculateRatingsTotal(feedbackList);
-
-  const percentage = (rating: number) => {
-    return (rating / feedbackList.length * 100).toFixed(0);
-  }
+  const totalStarRating = overallRatingsAverage(feedbackList);
 
   starRatings.forEach((stars: number, index: number) => {
-    const ratingPercentage = percentage(stars);
+    const ratingPercentage = ratingsPercentage(stars, feedbackList);
     ratings[index].percentage = ratingPercentage;
   });
   
