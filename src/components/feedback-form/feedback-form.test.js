@@ -1,66 +1,74 @@
 import '@testing-library/jest-dom';
 import renderer from 'react-test-renderer';
 import { fireEvent, render, screen, waitFor } from '@testing-library/react';
-import { Provider } from 'react-redux';
-import { store } from '../../store/store';
-import { BrowserRouter as Router } from 'react-router-dom';
 import FeedbackForm from './feedback-form';
 
 describe(('Feedback Form'), () => {  
-  const renderFeedbackForm = () => {
-    return render(
-      <Provider store={store}>
-        <Router>
-          <FeedbackForm />
-        </Router>
-      </Provider>
-    );
-  };
-
-  it('renders', () => {
-    let component = renderer.create(
-      <Provider store={store}>
-        <Router>
-          <FeedbackForm />
-        </Router>
-      </Provider>
-    );
+  it('matches the snapshot', () => {
+    let component = renderer.create(<FeedbackForm />);
     let tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
 
   it('should render the basic fields', () => {
-    renderFeedbackForm();
+    render(<FeedbackForm />);
+ 
+     expect(screen.getByRole('textbox', { 
+       name: /name/i 
+     })).toBeInTheDocument();
+ 
+     expect(screen.getByRole('textbox', { 
+       name: /email/i 
+     })).toBeInTheDocument();
+ 
+     expect(screen.getByRole('spinbutton', { 
+       name: /rating/i 
+     })).toBeInTheDocument();
+ 
+     expect(screen.getByRole('textbox', { 
+       name: /comment/i 
+     })).toBeInTheDocument();
+ 
+     expect(screen.getByRole('button', { 
+       name: /submit/i 
+     })).toBeInTheDocument();
+   })
 
-    expect(screen.getByRole('textbox', { 
-      name: 'Name' 
-    })).toBeInTheDocument();
+  it('submits the form successfully', async () => {
+    const onSubmit = jest.fn();
+    render(<FeedbackForm onSubmit={onSubmit} />);
 
-    expect(screen.getByRole('textbox', { 
-      name: 'Email' 
-    })).toBeInTheDocument();
+    fireEvent.input(screen.getByRole('textbox', { name: /name/i }), {
+      target: { value: 'David Bowie' }
+    });
 
-    expect(screen.getByRole('spinbutton', { 
-      name: 'Rating' 
-    })).toBeInTheDocument();
+    fireEvent.input(screen.getByRole('textbox', { name: /email/i }), {
+      target: { value: 'test@email.com' }
+    });
 
-    expect(screen.getByRole('textbox', { 
-      name: 'Comment' 
-    })).toBeInTheDocument();
+    fireEvent.input(screen.getByRole('spinbutton', { name: /rating/i }), {
+      target: { value: 5 }
+    });
 
-    expect(screen.getByRole('button', { 
-      name: 'Submit' 
-    })).toBeInTheDocument();
+    fireEvent.input(screen.getByRole('textbox', { name: /comment/i }), {
+      target: { value: 'this is a comment' }
+    });
+
+    fireEvent.click(screen.getByText(/submit/i));
+
+    await waitFor(() => {
+      expect(onSubmit).toHaveBeenCalled();
+    });
   });
 
   it('shows error messages', async () => {
-    renderFeedbackForm();
+    render(<FeedbackForm />);
 
-    fireEvent.input(screen.getByRole('textbox', { name: 'Email' }), {
+    fireEvent.input(screen.getByRole('textbox', { name: /email/i }), {
       target: { value: 'test wrong email' }
     });
 
-    fireEvent.input(screen.getByRole('spinbutton', { name: 'Rating' }), {
+    fireEvent.input(screen.getByRole('spinbutton', { name: /rating/i }), {
       target: { value: '6' }
     });
 

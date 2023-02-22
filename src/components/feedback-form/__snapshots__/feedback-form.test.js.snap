@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Feedback Form renders 1`] = `
+exports[`Feedback Form matches the snapshot 1`] = `
 <form
   className="sc-bcXHqe iozQoF"
   noValidate={true}

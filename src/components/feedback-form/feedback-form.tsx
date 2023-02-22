@@ -1,8 +1,4 @@
-import { useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
-import { useDispatch } from 'react-redux';
-import uuid from 'react-uuid';
-import { setRating } from '../../store/rating/rating.action';
 
 import { 
   FeedbackFormStyled, 
@@ -22,17 +18,8 @@ type FormData = {
   comment: string;
 }
 
-const FeedbackForm = () => {
-  const navigate = useNavigate();
-  const dispatch = useDispatch();
-  const { register, formState: { errors }, handleSubmit, reset } = useForm<FormData>();
-
-  const onSubmit = (data: object) => {
-    const currentRating: any = { id: uuid(), ...data };
-    dispatch(setRating(currentRating));
-    reset();
-    navigate('/results');
-  };
+const FeedbackForm = ({ onSubmit } : any) => {
+  const { register, formState: { errors }, handleSubmit } = useForm<FormData>();
 
   return (
     <FeedbackFormStyled noValidate arial-label='Feedback form'>
