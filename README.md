@@ -33,8 +33,9 @@ Styled components: https://styled-components.com/
   
 * Add component to display total rating with stars highlighted in detail.
 * Select rating by clicking on stars instead of number input.
-* Additional test coverage.
 * Typescript improvements.
+* CSS improvements, eg. Colour variables
+* Additional test coverage.
 
 ## Author
 
