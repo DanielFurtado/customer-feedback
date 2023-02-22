@@ -2,7 +2,7 @@
 
 exports[`Feedback Form renders 1`] = `
 <form
-  className="sc-bcXHqe cudjRR"
+  className="sc-bcXHqe iozQoF"
   noValidate={true}
 >
   <h2>
@@ -101,7 +101,7 @@ exports[`Feedback Form renders 1`] = `
     className="sc-eDvSVe cMlANh"
   >
     <button
-      className="sc-iBYQkv cPoVNX"
+      className="sc-ftTHYK iynfzl"
       onClick={[Function]}
       type="submit"
     >
