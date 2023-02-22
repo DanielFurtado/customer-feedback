@@ -18,7 +18,7 @@ type FormData = {
   comment: string;
 }
 
-const FeedbackForm = ({ onSubmit } : any) => {
+const FeedbackForm = ({ onSubmit }: any) => {
   const { register, formState: { errors }, handleSubmit } = useForm<FormData>();
 
   return (
