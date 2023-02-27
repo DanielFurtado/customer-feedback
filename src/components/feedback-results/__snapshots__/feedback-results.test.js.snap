@@ -2,16 +2,16 @@
 
 exports[`Feedback Results renders 1`] = `
 <div
-  className="sc-eDWCr himBEe"
+  className="sc-bqWxrE dacVvm"
 >
   <div
-    className="sc-bqWxrE gGrhSY"
+    className="sc-ksBlkl gjJgIa"
   >
     <h2>
       Feedback Results
     </h2>
     <button
-      className="sc-fnGiBr jDaNuL"
+      className="sc-fEXmlR dldJgt"
       onClick={[Function]}
       type="button"
     >
@@ -35,6 +35,7 @@ exports[`Feedback Results renders 1`] = `
   <h3>
     Latest Comments
   </h3>
+  <hr />
   <section>
     <div
       className="sc-gKPRtg hyPmrB"

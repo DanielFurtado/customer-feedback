@@ -3,8 +3,12 @@
 exports[`Customer Feedback component renders 1`] = `
 Array [
   <div
-    className="sc-dkrFOg bcxOmF"
-    title="test@email.com"
+    className="sc-dkrFOg dcSmHG"
+  >
+    Name
+  </div>,
+  <div
+    className="sc-hLBbgP fIMpSd"
   >
     test@email.com
   </div>,
@@ -59,12 +63,12 @@ Array [
     </div>
   </div>,
   <div
-    className="sc-hLBbgP eTiGvC"
+    className="sc-eDvSVe dHqAWI"
   >
     this is a comment
   </div>,
   <div
-    className="sc-eDvSVe dpeUS"
+    className="sc-jSUZER lcAefU"
   >
     <hr />
   </div>,
