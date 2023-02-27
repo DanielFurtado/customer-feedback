@@ -19,6 +19,7 @@ const FeedbackResultsComments = () => {
   return (
     <Fragment>
       <h3>Latest Comments</h3>
+      <hr />
       <section>
         {feedbackList.length ? (
           feedbackList.map(feedback => 

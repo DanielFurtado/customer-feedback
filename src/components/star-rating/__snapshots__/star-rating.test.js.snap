@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Star Rating renders 1`] = `
+<div
+  className="sc-bcXHqe dMssKH"
+  title="5 out of 5 stars"
+>
+  <div
+    className="sc-gswNZR joqcDS Star--rating on"
+  >
+    <span
+      className="star"
+    >
+      ★
+    </span>
+  </div>
+  <div
+    className="sc-gswNZR joqcDS Star--rating on"
+  >
+    <span
+      className="star"
+    >
+      ★
+    </span>
+  </div>
+  <div
+    className="sc-gswNZR joqcDS Star--rating on"
+  >
+    <span
+      className="star"
+    >
+      ★
+    </span>
+  </div>
+  <div
+    className="sc-gswNZR joqcDS Star--rating on"
+  >
+    <span
+      className="star"
+    >
+      ★
+    </span>
+  </div>
+  <div
+    className="sc-gswNZR joqcDS Star--rating on"
+  >
+    <span
+      className="star"
+    >
+      ★
+    </span>
+  </div>
+</div>
+`;
