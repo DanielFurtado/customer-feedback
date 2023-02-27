@@ -38,7 +38,6 @@ exports[`Rating Form renders 1`] = `
     <h3>
       Latest Comments
     </h3>
-    <hr />
     <section>
       <div
         className="sc-gKPRtg hyPmrB"
