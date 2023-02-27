@@ -3,17 +3,68 @@
 exports[`Customer Feedback component renders 1`] = `
 Array [
   <div
-    className="sc-bcXHqe fCRhLI"
+    className="sc-dkrFOg bcxOmF"
+    title="test@email.com"
   >
     test@email.com
   </div>,
   <div
-    className="sc-gswNZR fYHcfJ"
+    className="sc-bcXHqe dMssKH"
+    title="5 out of 5 stars"
+  >
+    <div
+      className="sc-gswNZR joqcDS Star--rating on"
+    >
+      <span
+        className="star"
+      >
+        ★
+      </span>
+    </div>
+    <div
+      className="sc-gswNZR joqcDS Star--rating on"
+    >
+      <span
+        className="star"
+      >
+        ★
+      </span>
+    </div>
+    <div
+      className="sc-gswNZR joqcDS Star--rating on"
+    >
+      <span
+        className="star"
+      >
+        ★
+      </span>
+    </div>
+    <div
+      className="sc-gswNZR joqcDS Star--rating on"
+    >
+      <span
+        className="star"
+      >
+        ★
+      </span>
+    </div>
+    <div
+      className="sc-gswNZR joqcDS Star--rating on"
+    >
+      <span
+        className="star"
+      >
+        ★
+      </span>
+    </div>
+  </div>,
+  <div
+    className="sc-hLBbgP eTiGvC"
   >
     this is a comment
   </div>,
   <div
-    className="sc-dkrFOg bUNOjm"
+    className="sc-eDvSVe dpeUS"
   >
     <hr />
   </div>,
