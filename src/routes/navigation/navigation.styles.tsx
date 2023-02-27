@@ -46,29 +46,36 @@ export const NavLinksContainer = styled.ul`
     position: relative;
     text-decoration: none;
     white-space: nowrap;
-  }
-  
-  .Nav--link::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: white;
-  }
 
-  .Nav--link:hover {
-    color: rgb(109, 112, 142);
-  }
-  
-  .Nav--link.active::after {
-    transform: scaleX(1);
-  }
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: white;
 
-  @media (max-width: 768px) {
-  .Nav--link::after {
-    top: 38px;
+      @media (max-width: 768px) {
+        top: 38px;
+      }
+    }
+
+    &:focus {
+      color: white;
+    }
+
+    &:hover {
+      color: rgb(109, 112, 142);
+    }
+    
+    &.active::after {
+      transform: scaleX(1);
+    }
+
+    &.active:focus {
+      color: white;
+    }
   }
-}`;
+`;
