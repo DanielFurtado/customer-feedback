@@ -11,7 +11,7 @@ This app collects and displays customer feedback.
 
 - Clone the repo and run `npm install`
   
-- To start the application run `npm run start`
+- To start the application run `npm start`
 
 -  `npm run test` to run unit tests
 
